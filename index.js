@@ -37,6 +37,8 @@ require('./src/routes/website/user.routes')(server);
 require('./src/routes/website/order.routes')(server);
 
 
+console.log(process.env.MONGODB_URL)
+
 
 server.listen(process.env.PORT, () => {
     mongoose.connect(process.env.MONGODB_URL)
